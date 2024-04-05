@@ -10,6 +10,6 @@ const employeeSchema = new mongoose.Schema(
     { versionKey: false }
 )
 
-const Employee = mongoose.model('employee', EmployeeSchema, 'employees')
+const Employee = mongoose.model('employee', employeeSchema, 'employees')
 
-module.exports = Product
+module.exports = Employee

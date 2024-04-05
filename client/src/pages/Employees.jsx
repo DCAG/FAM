@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+
+const EMPLOYEES_URL = 'http://localhost:3000/employees'
 
 function Employees() {
+
+  useEffect(() => {
+    
+  },[])
+
   return (
     <div>
         <h1>

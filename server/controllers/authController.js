@@ -1,25 +1,32 @@
 const express = require('express')
 const jwt = require('jsonwebtoken')
+const usersService = require('../services/usersService')
 
 const router = express.Router()
 
 // inside: /auth/
-router.post('/login', (req,res) => {
+router.post('/login', async (req,res) => {
     const {username, password} = req.body
 
+    console.log("inside /login")
+
     //check username and password in db
-    if(true){
-        const userId = 'some_id'
-        const SECRET_KEY = 'some_key' // process.env.SECRET_KEY
+    if(await usersService.verifyCredentials(username, password)){
+        const user = (await usersService.getByUsername(username))
+        console.log("[userId] inside /auth controller", user.id)
+        const JWT_SECRET = process.env.JWT_SECRET
+        console.log("JWT_SECRET",JWT_SECRET)
         const token = jwt.sign(
-            {userId},
-            SECRET_KEY,
+            {user},
+            JWT_SECRET,
             {expiresIn:"2h"}
         );
-        res.send({accessToken: token})
+        console.log("accessToken", token)
+        res.send({accessToken: token, user: user})
     }
     else{
-        res.send("wrong credentials")
+        console.log("wrong credentials")
+        res.status(403).send("wrong credentials")
     }
 })
 

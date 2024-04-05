@@ -1,24 +1,39 @@
 import FAMLogo from '/factory.svg'
 import './App.css'
-import {Link, Route, Routes} from 'react-router-dom'
-import LoginPage from '../pages/LoginPage'
-import Departments from '../pages/Departments'
-import EditDepartment from '../pages/EditDepartment'
-import NewDepartment from '../pages/NewDepartment'
-import Employees from '../pages/Employees'
-import NewEmployee from '../pages/NewEmployee'
-import EditEmployee from '../pages/EditEmployee'
-import Shifts from '../pages/Shifts'
-import Users from '../pages/Users'
-import ErrorPage from '../pages/ErrorPage'
+import {Link, Route, Routes, useNavigate} from 'react-router-dom'
+import LoginPage from './pages/LoginPage'
+import Departments from './pages/Departments'
+import EditDepartment from './pages/EditDepartment'
+import NewDepartment from './pages/NewDepartment'
+import Employees from './pages/Employees'
+import NewEmployee from './pages/NewEmployee'
+import EditEmployee from './pages/EditEmployee'
+import Shifts from './pages/Shifts'
+import Users from './pages/Users'
+import ErrorPage from './pages/ErrorPage'
+import useAuth from './utils/useAuth'
 
 function App() {
+  const navigate = useNavigate()
+  // const {logout} = useAuth()
+  const logout = () => {
+    sessionStorage.clear()
+    navigate('/')
+  }
+  const { isAuthenticated } = useAuth();
+
   return (
     <>
       <div>
         <center>
           <img src={FAMLogo} className="logo" alt="FAM logo" />
         </center>
+        {/*TODO: implement with REDUX*/}
+        <div className={!sessionStorage['accessToken']?'hide_section--default':''}>
+          {sessionStorage["fullName"]??""} <br />
+          Actions Left: {sessionStorage["numOfActions"]??"###"} out of {sessionStorage["maxActions"]??"###"}<br />
+          <button onClick={logout}>Logout</button>
+        </div>
         <nav className='main-nav'>
           <ul className='main-nav__items'>
             <li><Link to='/'>Home</Link></li>
