@@ -5,7 +5,7 @@ const shiftSchema = new mongoose.Schema(
         date: Date,
         startHour: Number,
         endHour: Number,
-        assignedEmployee: [{type: mongoose.Schema.Types.ObjectId, ref: 'Employee'}]
+        assignedEmployees: [{type: mongoose.Schema.Types.ObjectId, ref: 'employee'}]
     },
     { versionKey: false }
 )
