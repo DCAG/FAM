@@ -31,7 +31,7 @@ function App() {
         {/*TODO: implement with REDUX*/}
         <div className={!sessionStorage['accessToken']?'hide_section--default':''}>
           {sessionStorage["fullName"]??""} <br />
-          Actions Left: {sessionStorage["numOfActions"]??"###"} out of {sessionStorage["maxActions"]??"###"}<br />
+          {/* Actions Left: {sessionStorage["numOfActions"]??"###"} out of {sessionStorage["maxActions"]??"###"}<br /> */}
           <button onClick={logout}>Logout</button>
         </div>
         <nav className='main-nav'>
