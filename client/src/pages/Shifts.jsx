@@ -43,10 +43,10 @@ function Shifts() {
   return (
     <div>
         <h1>Shifts</h1>
-        <ul>
+        <ul style={{listStyleType:'none',margin:0,padding:0}}>
         {
-          shifts.map((shift, idx) => {
-            return <li key={idx}>{shift.time}</li>
+          shifts.sort((a, b) => `${a.date + a.startingHour + a.endingHour}`.localeCompare(b.date + b.startingHour + b.endingHour)).map((shift) => {
+            return <li key={shift._id}>{shift.date?.replace(/T.*Z/g,'')} {shift.startingHour}-{shift.endingHour}</li>
           })
         }
         </ul>

@@ -23,7 +23,7 @@ function Employees() {
         const {data} = await axios.get(EMPLOYEES_URL, { headers: headers })
         setEmployees(data)
         //POPULATE filter by department
-        const employeesDepartments = [... new Set(data.map(item=>item.department.name))]
+        const employeesDepartments = [... new Set(data.map(item=>item.department?.name))]
         console.log("Pages/Employees/useEffect/groupByDepartments",employeesDepartments)
         setDepartments(employeesDepartments)
       }catch(error){
@@ -54,7 +54,7 @@ function Employees() {
         
         {console.log("departments",departments)}
 
-        <Link to="add">Add Employee</Link> <br />
+        <Link to="new">Add Employee</Link> <br />
         Filter By:
         <select name="" id="" defaultValue={""} onChange={e=>{setSelectedDepartment(e.target.value)}}>
           <option key="_" value="">All Departments</option>
@@ -74,33 +74,43 @@ function Employees() {
               <th>Shifts</th>
             </tr>
           </thead>
+          <tbody>
             {
-                employees.filter((employee)=>{return !selectedDepartment || employee.department.name===selectedDepartment}).map((employee) => {
-                    return (
-                        <tr>
-                          <td>
-                            <Link to={`/employees/${employee._id}/edit`}>{employee.firstName} {employee.lastName}</Link>
-                          </td>
-                          <td>
-                            <Link to={`/departments/${employee.department._id}/edit`}>{employee.department.name}</Link>
-                          </td>
-                          <td>
-                            <ul>
-                            {
-                              employee.shits?.map(shift => {
-                                return (
-                                  <li key={shift._id}>{shift}</li>
+              employees.filter((employee)=>{return !selectedDepartment || employee.department?.name===selectedDepartment}).map((employee) => {
+                return (
+                  <tr key={employee._id}>
+                      <td>
+                        <Link to={`/employees/${employee._id}/edit`}>{employee.firstName} {employee.lastName}</Link>
+                      </td>
+                      <td>
+                        <Link to={`/departments/${employee.department?._id}/edit`}>{employee.department?.name}</Link>
+                      </td>
+                      <td>
+                        <ul style={{listStyleType:'none',margin:0,padding:0}}>
+                        {
+                          /*
+                            _id: new ObjectId('6612b46247ee8ff25451f5b4'),
+                            date: 2024-01-27T00:00:00.000Z,
+                            startingHour: 16,
+                            endingHour: 17,
+                            */
+                            employee.assignedShifts
+                            ?.sort((a, b) => `${a.date + a.startingHour + a.endingHour}`.localeCompare(b.date + b.startingHour + b.endingHour))
+                            .map(shift => {
+                              return (
+                                <li key={shift._id}>{shift.date?.replace(/T.*Z/g,'')} {shift.startingHour}-{shift.endingHour}</li>
                                 )
                               })
                             }
-                            </ul>
-                            {/* <EmployeeShifts data={employee.shifts} /> */}
-                            {/* date & time */}
-                          </td>
-                        </tr>
-                    )
-                })
+                        </ul>
+                        {/* <EmployeeShifts data={employee.shifts} /> */}
+                        {/* date & time */}
+                      </td>
+                  </tr>
+                 )
+              })
             }
+          </tbody>
         </table>
     </div>
   )
