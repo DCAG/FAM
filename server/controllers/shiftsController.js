@@ -1,15 +1,11 @@
 const express = require('express')
+const shiftsService = require("../services/shiftsService")
 
 const router = express.Router()
 
-router.get('/', (req,res) => {
-    const shifts = [
-        {time:'3h'},
-        {time:'6h'},
-        {time:'9h'},
-        {time:'12h'}
-    ]
-    
+router.get('/', async (req,res) => {
+    const shifts = await shiftsService.getAll()
+    console.log("/shifts - show list from the db:", shifts)
     res.send(shifts)
 })
 

@@ -8,4 +8,12 @@ const getById = (id) => {
     return employeesRepo.getById(id)
 }
 
-module.exports = {getAll, getById}
+const update = (employee) => {
+    return employeesRepo.save()
+}
+
+const create = (employee) => {
+    return employeesRepo.create(employee)
+}
+
+module.exports = {getAll, getById, create, update}
