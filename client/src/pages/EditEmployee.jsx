@@ -1,6 +1,6 @@
 import React from 'react'
 
-function EditEmployee() {
+function EditEmployee(id) {
   return (
     <div>
         <h1>
