@@ -9,7 +9,7 @@ const getById = (id) => {
 }
 
 const update = (employee) => {
-    return employeesRepo.save()
+    return employee.save()
 }
 
 const create = (employee) => {

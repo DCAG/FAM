@@ -1,0 +1,82 @@
+[
+  {
+    "_id": ObjectId("65e103591bf3b969f2e247e7"),
+    "name": "Finance",
+    "employees": [
+      "65e115ec1bf3b969f2e24806",
+      "65e115ec1bf3b969f2e24807",
+      "65e115ec1bf3b969f2e2480b",
+      "65e115ed1bf3b969f2e2480d",
+      "65e115ed1bf3b969f2e24814",
+      "65e115ed1bf3b969f2e24819",
+      "65e115ed1bf3b969f2e2481f"
+    ],
+    "manager": "65e115ed1bf3b969f2e24819"
+  },
+  {
+    "_id": ObjectId("65e1037c1bf3b969f2e247e8"),
+    "name": "Engineering",
+    "employees": [
+      "65e115ed1bf3b969f2e24812",
+      "65e115ed1bf3b969f2e24815",
+      "65e115ed1bf3b969f2e2481d",
+      "65e115ed1bf3b969f2e2481e"
+    ],
+    "manager": "65e115ed1bf3b969f2e2481d"
+  },
+  {
+    "_id": ObjectId("65e103b81bf3b969f2e247e9"),
+    "name": "Marketing",
+    "employees": [
+      "65e115ec1bf3b969f2e24808",
+      "65e115ec1bf3b969f2e2480a",
+      "65e115ed1bf3b969f2e24813",
+      "65e115ed1bf3b969f2e24816"
+    ],
+    "manager": "65e115ed1bf3b969f2e24816"
+  },
+  {
+    "_id": ObjectId("65e103bc1bf3b969f2e247ea"),
+    "name": "IT",
+    "employees": "6613cd1db59dc419cc7dae5c",
+    "manager": "6613cd1db59dc419cc7dae5c"
+  },
+  {
+    "_id": ObjectId("65e103ce1bf3b969f2e247eb"),
+    "name": "Accounting",
+    "employees": [
+      "65e115ec1bf3b969f2e24805",
+      "65e115ed1bf3b969f2e2480c",
+      "65e115ed1bf3b969f2e2480e",
+      "65e115ed1bf3b969f2e2480f",
+      "65e115ed1bf3b969f2e24818",
+      "65e115ed1bf3b969f2e2481c"
+    ],
+    "manager": "65e115ed1bf3b969f2e2481c"
+  },
+  {
+    "_id": ObjectId("65e103fe1bf3b969f2e247ec"),
+    "name": "HR",
+    "employees": [
+      "65e115ed1bf3b969f2e24811",
+      "65e115ed1bf3b969f2e2481b",
+      "65e115ed1bf3b969f2e24820",
+      "65e115ed1bf3b969f2e24821"
+    ],
+    "manager": "65e115ed1bf3b969f2e2481b"
+  },
+  {
+    "_id": ObjectId("65e104081bf3b969f2e247ed"),
+    "name": "Operations",
+    "employees": [
+      "65e115ec1bf3b969f2e24809",
+      "65e115ed1bf3b969f2e24810",
+      "65e115ed1bf3b969f2e24817",
+      "65e115ed1bf3b969f2e2481a",
+      "65e115ed1bf3b969f2e24822",
+      "6613ce5cb59dc419cc7dae66",
+      "6613ced2b59dc419cc7dae6d"
+    ],
+    "manager": "6613ce5cb59dc419cc7dae66"
+  }
+]

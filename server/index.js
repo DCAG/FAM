@@ -9,6 +9,7 @@ const authController = require('./controllers/authController')
 const shiftsController = require('./controllers/shiftsController')
 const employeesController = require('./controllers/employeesController')
 const usersController = require('./controllers/usersController')
+const departmentsController = require('./controllers/departmentsController')
 
 const app = express()
 
@@ -17,6 +18,7 @@ connectDB()
 app.use(cors())
 app.use(express.json())
 // app.use(actionsCounter())
+app.use('/departments', departmentsController)
 app.use('/employees', employeesController)
 app.use('/auth', authController);
 app.use('/shifts', /*jwtauth, actionsCounter,*/ shiftsController);
