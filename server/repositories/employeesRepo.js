@@ -14,8 +14,8 @@ const getByDepartmentId = (departmentId) => {
     return employees.findOne({departmentId: departmentId})
 }
 
-const update = (employee) => {
-    return employee.save()
+const update = (id,employee) => {
+    return employees.findByIdAndUpdate(id,employee)
 }
 
 const create = (employee) => {

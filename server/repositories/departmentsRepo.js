@@ -12,6 +12,10 @@ const getByName = (name) => {
     return departments.findOne({name: name})
 }
 
+const getByManager = (manager) => {
+    return departments.findOne({manager: manager})
+}
+
 const update = (id,department) => {
     return departments.findByIdAndUpdate(id,department)
 }
@@ -25,4 +29,4 @@ const remove = (id) => {
 }
 
 
-module.exports = {getAll, getById, getByName, update, create, remove}
+module.exports = {getAll, getById, getByName, update, create, remove, getByManager}

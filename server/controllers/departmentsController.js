@@ -5,7 +5,6 @@ const router = express.Router()
 
 router.get('/', async (req,res) => {
     const departments = await departmentsService.getAll()
-    console.log("/departments - show list from the db:", departments)
     res.send(departments)
 })
 
@@ -55,7 +54,7 @@ router.put('/:id', async (req,res) => {
         const objectToUpdate = req.body
         const {id} = req.params
         const result = await departmentsService.update(id,objectToUpdate)
-        console.log("put result",result?.data)
+        console.log("put result",result?._doc)
     } 
     catch(err){
         console.log(err)
