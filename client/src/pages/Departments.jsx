@@ -4,10 +4,12 @@ import { useNavigate, Link } from 'react-router-dom'
 import useAuth from '../utils/useAuth'
 
 const DEPARTMENTS_URL = 'http://localhost:3000/departments'
+const EMPLOYEES_URL = 'http://localhost:3000/employees'
 
 function Departments() {
 
   const [departments, setDepartments] = useState([])
+  const [employees, setEmployees] = useState([])
 
   const navigate = useNavigate()
 
@@ -20,7 +22,8 @@ function Departments() {
       try{
         const {data} = await axios.get(DEPARTMENTS_URL, { headers: headers })
         setDepartments(data)
-        //console.log(data)
+        const {data:allEmployeesData} = await axios.get(EMPLOYEES_URL, { headers: headers })
+        setEmployees(allEmployeesData)
       }catch(error){
         if(error?.response?.data?.name=="DAILY_MAX_ACTIONS_REACHED"){
           localStorage['lastError'] = error?.response?.data?.message  
@@ -66,13 +69,16 @@ function Departments() {
                   </td>
                   <td>
                     <ul>
-                    {department.employees?.map((employee) => {
-                      return (
-                        <li key={employee._id}>
-                          {employee.firstName + ' ' + employee.lastName}
-                        </li>
-                      )
-                    })}
+                    {
+                      employees.filter(employee => employee.department?._id === department._id)
+                      .map((employee) => {
+                        return (
+                          <li key={employee._id}>
+                            {employee.firstName + ' ' + employee.lastName}
+                          </li>
+                        )
+                      })
+                    }
                     </ul>
                   </td>
                 </tr>

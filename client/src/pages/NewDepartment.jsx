@@ -7,7 +7,7 @@ const EMPLOYEES_URL = 'http://localhost:3000/employees'
 const DEPARTMENTS_CREATE_URL = 'http://localhost:3000/departments/create'
 
 function NewDepartment() {
-  const [department, setDepartment] = useState({name:'',manager:''})
+  const [department, setDepartment] = useState({})
   const [employees, setEmployees] = useState([])
 
   const handleSubmit = async (e) => {
@@ -50,13 +50,13 @@ function NewDepartment() {
 
   return (
     <div>
-        <h1>NewDepartment</h1>
+        <h1>New Department</h1>
         <Link to="/Departments">Cancel</Link>
         <form onSubmit={handleSubmit} method="post">
             <label htmlFor="name">Name</label>
-            <input type="text" name="name" value={department.name} onChange={e=>setDepartment({...department, name: e.target.value})}/> <br />
+            <input type="text" name="name" onChange={e=>setDepartment({...department, name: e.target.value})}/> <br />
             <label htmlFor="manager">Manager</label>
-            <select name='manager' value={department.manager} onChange={e=>setDepartment({...department, manager: e.target.value})}>
+            <select name='manager' value={''} onChange={e=>setDepartment({...department, manager: e.target.value})}>
               <option value=''>Select a manager...</option>
               {
                 employees.map(employee => {
