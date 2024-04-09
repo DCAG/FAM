@@ -11,7 +11,7 @@ const getById = (id) => {
 }
 
 const getByDepartmentId = (departmentId) => {
-    return employees.findOne({departmentId: departmentId})
+    return employees.find({department: departmentId})
 }
 
 const update = (id,employee) => {
@@ -22,4 +22,8 @@ const create = (employee) => {
     return employees.create(employee)
 }
 
-module.exports = {getAll, getById, getByDepartmentId, update, create}
+const remove = (id) => {
+    return employees.findByIdAndDelete(id)
+}
+
+module.exports = {getAll, getById, getByDepartmentId, update, create, remove}

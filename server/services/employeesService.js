@@ -8,8 +8,8 @@ const getById = (id) => {
     return employeesRepo.getById(id)
 }
 
-const update = (employee) => {
-    return employee.save()
+const update = (id,employee) => {
+    return employeesRepo.update(id,employee)
 }
 
 const create = (employee) => {

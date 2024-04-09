@@ -1,11 +1,11 @@
 const departments = require('../models/departmentsModel')
 
 const getAll = () => {
-    return departments.find().populate('employees').populate('manager').exec()
+    return departments.find().populate('manager').exec()
 }
 
 const getById = (id) => {
-    return departments.findById(id).populate('employees').populate('manager').exec()
+    return departments.findById(id).populate('manager').exec()
 }
 
 const getByName = (name) => {
