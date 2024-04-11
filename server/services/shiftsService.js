@@ -8,4 +8,8 @@ const getById = (id) => {
     return shiftsRepo.getById(id)
 }
 
-module.exports = {getAll, getById}
+const update = (id,shift) => {
+    return shiftsRepo.update(id,shift)
+}
+
+module.exports = {getAll, getById, update}

@@ -7,9 +7,12 @@ const EMPLOYEES_URL = 'http://localhost:3000/employees'
 const DEPARTMENTS_URL = 'http://localhost:3000/departments'
 
 function EditDepartment() {
+
   const {id: paramsId} = useParams()
   const [department, setDepartment] = useState({})
   const [employees, setEmployees] = useState([])
+  const [members, setMembers] = useState([])
+  const [outsiders, setOutsiders] = useState([])
   const [selectedEmployee, setSelectedEmployee] = useState('')
   
   const navigate = useNavigate()
@@ -40,16 +43,29 @@ function EditDepartment() {
 
     getDepartment()
     
-  },[])
+  },[paramsId])
+
+  useEffect(() => {
+    if(selectedEmployee === ''){
+      //in case the department is populated in mongoose (on server side) the 'department' property will be an object (hence accessing _id), otherwise an id string
+      setMembers(employees.filter(employee => (employee.department?._id??employee.department) === paramsId))
+      setOutsiders(employees.filter(employee => (employee.department?._id??employee.department) !== paramsId))
+    }
+  },[employees, selectedEmployee])
 
   const handleAddClick = async () => {  
-    const accessToken = sessionStorage['accessToken']
-    const headers = {'x-access-token': "Bearer " + accessToken}
-    const index = employees.findIndex(employee=>employee._id === selectedEmployee)
-    employees[index].department = paramsId
-    const result = await axios.put(`${EMPLOYEES_URL}/${selectedEmployee}`, employees[index], { headers: headers })
-    console.log("result",result)
-    //TODO: make the employees render the page again
+    try{
+      const accessToken = sessionStorage['accessToken']
+      const headers = {'x-access-token': "Bearer " + accessToken}
+      const index = employees.findIndex(employee=>employee._id === selectedEmployee)
+      employees[index].department = paramsId
+      const result = await axios.put(`${EMPLOYEES_URL}/${selectedEmployee}`, employees[index], { headers: headers })
+      console.log("result",result??'')
+      setSelectedEmployee('')
+    }
+    catch(err){
+      console.log(err)
+    }
   }
 
   const handleUpdateClick = async () => {
@@ -84,13 +100,15 @@ function EditDepartment() {
               }
             </select>
             <br />
+            <br />            
             <button type="button" onClick={handleUpdateClick}>Update</button>
             <button type="button" onClick={handleDeleteClick}>Delete</button>
             <br />
+
             <h2>List of Employees</h2>
             <ul>
               {
-                employees.filter(employee => employee.department?._id === paramsId)
+                members
                 .map(employee => {
                   return (
                     <li key={employee._id}>
@@ -100,10 +118,11 @@ function EditDepartment() {
                 })
               }
             </ul>
+
             <select value={selectedEmployee} onChange={e=>setSelectedEmployee(e.target.value)}>
               <option value='' disabled>Select employee...</option>
               {          
-                employees.filter(employee => employee.department?._id !== paramsId)
+                outsiders
                 .map(employee => {
                   return (
                     <option key={employee._id} value={employee._id}>

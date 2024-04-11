@@ -8,8 +8,8 @@ const getById = (id) => {
     return shifts.findById(id)
 }
 
-const update = (shift) => {
-    return shift.save()
+const update = (id,shift) => {
+    return shifts.findByIdAndUpdate(id,shift)
 }
 
 const create = (shift) => {

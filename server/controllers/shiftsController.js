@@ -9,4 +9,18 @@ router.get('/', async (req,res) => {
     res.send(shifts)
 })
 
+router.put('/:id', async (req,res) => {
+    try {
+        const objectToUpdate = req.body
+        const {id} = req.params
+        const result = await shiftsService.update(id,objectToUpdate)
+        console.log("put result",result?._doc)
+        res.send({data: result?._doc, description: "previous object"})
+    } 
+    catch(err){
+        console.log(err)
+        res.send(err)
+    }
+})
+
 module.exports = router

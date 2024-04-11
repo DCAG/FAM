@@ -41,6 +41,7 @@ router.put('/:id', async (req,res) => {
         const {id} = req.params
         const result = await employeesSvc.update(id,objectToUpdate)
         console.log("put result",result?._doc)
+        res.send({data: result?._doc, description: "previous object"})
     } 
     catch(err){
         console.log(err)

@@ -1,9 +1,8 @@
 const employees = require('../models/employeesModel')
 require('../models/departmentsModel')
-require('../models/shiftsModel')
 
 const getAll = () => {
-    return employees.find().populate('department').populate('assignedShifts').exec()
+    return employees.find().populate('department').exec()
 }
 
 const getById = (id) => {

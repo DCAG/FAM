@@ -6,7 +6,7 @@ const employeeSchema = new mongoose.Schema(
         lastName: {type:String, required:true},
         startWorkYear: Number,
         department: {type: mongoose.Schema.Types.ObjectId, ref: 'department'},
-        assignedShifts: [{type: mongoose.Schema.Types.ObjectId, ref: 'shift'}]
+        //assignedShifts: [{type: mongoose.Schema.Types.ObjectId, ref: 'shift'}]
     }, 
     { versionKey: false }
 )
