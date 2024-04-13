@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, Link, useParams } from 'react-router-dom'
 import axios from 'axios'
+import { getHeaders } from '../utils/utils'
 import useAuth from '../utils/useAuth'
 
 const EMPLOYEES_URL = 'http://localhost:3000/employees'
@@ -8,34 +9,37 @@ const DEPARTMENTS_URL = 'http://localhost:3000/departments'
 const SHIFTS_URL = 'http://localhost:3000/shifts'
 
 function EditEmployee() {
-
-  const {id: paramsId} = useParams()
-  const [employee, setEmployee] = useState({})
+  // THIS employee
+  const {id: employeeId} = useParams()
+  const [employee, setEmployee] = useState({firstName: '', lastName: '', startWorkYear: '', department: ''})
+  // list of all departments to select for assigning the employee or changing their assignment.
   const [departments, setDepartments] = useState([])
+  // list of all shifts to register to. The selected shift document is updated with THIS employee.
   const [shifts, setShifts] = useState([])
   const [assignedShifts, setAssignedShifts] = useState([])
   const [unassignedShifts, setUnassignedShifts] = useState([])
   const [selectedShift, setSelectedShift] = useState('')
+
+  const shiftsComparer = (a, b) => ('' + a.date + a.startingHour + a.endingHour).localeCompare('' + b.date + b.startingHour + b.endingHour)
   
   const navigate = useNavigate()
   const {logoutUser} = useAuth()
   
   useEffect(() => {
     const getEmployee = async () => {
-      const accessToken = sessionStorage['accessToken']
-      const headers = {'x-access-token': "Bearer " + accessToken}
+      const headers = getHeaders()
       try{
-        const {data:employeeData} = await axios.get(`${EMPLOYEES_URL}/${paramsId}`, { headers: headers })
+        const {data:employeeData} = await axios.get(`${EMPLOYEES_URL}/${employeeId}`, { headers: headers })
         setEmployee(employeeData)
+        
         const {data:allDepartmentsData} = await axios.get(DEPARTMENTS_URL, { headers: headers })
         setDepartments(allDepartmentsData)
+        
         const {data:allShiftsData} = await axios.get(SHIFTS_URL, { headers: headers })
-        setShifts(allShiftsData.sort((a, b) => `${a.date + a.startingHour + a.endingHour}`.localeCompare(b.date + b.startingHour + b.endingHour)))
+        setShifts(allShiftsData.sort(shiftsComparer))
       }catch(error){
         if(error?.response?.data?.name=="DAILY_MAX_ACTIONS_REACHED"){
-          // should i return an error component instead?
           localStorage['lastError'] = error?.response?.data?.message  
-          // logout:
           logoutUser()
         }
         else{
@@ -51,34 +55,45 @@ function EditEmployee() {
 
   useEffect(() => {
     if(selectedShift === ''){
-      setAssignedShifts(shifts
-        .filter(shift => shift.assignedEmployees.includes(paramsId)))
-      setUnassignedShifts(shifts
-        .filter(shift => !shift.assignedEmployees.includes(paramsId)))
+      const filteredAssignedShifts = shifts.filter(shift => shift.employees.some(e => e._id == employeeId))
+      setAssignedShifts(filteredAssignedShifts)
+      const filteredUnassignedShifts = shifts.filter(shift => !shift.employees.some(e => e._id == employeeId))
+      setUnassignedShifts(filteredUnassignedShifts)
     }
   },[shifts, selectedShift])
 
+  // add shift to an employee
   const handleAddClick = async () => {  
-    const accessToken = sessionStorage['accessToken']
-    const headers = {'x-access-token': "Bearer " + accessToken}
-    const index = shifts.findIndex(shift=>shift._id === selectedShift)
-    shifts[index].assignedEmployees.push(paramsId) //= [...shifts[index].assignedEmployees,employee] .filter(employee => employee._id !== paramsId)
-    const result = await axios.put(`${SHIFTS_URL}/${selectedShift}`, shifts[index], { headers: headers })
-    console.log("result",result)
-    setSelectedShift('')
+    if(selectedShift === ''){
+      console.log('Select a shift before clicking on \"Register\"')
+      return
+    }
+
+    try{
+      const headers = getHeaders()
+      const index = shifts.findIndex(shift=>shift._id === selectedShift)
+      shifts[index].employees.push(employee) // push(employeeId) would work as well
+      const result = await axios.put(`${SHIFTS_URL}/${selectedShift}`, shifts[index], { headers: headers })
+      console.log("result",result)
+      // triggers useEffect block
+      setSelectedShift('')
+    }
+    catch(err){
+      console.log(err)
+    }
   }
 
+  // update employee
   const handleUpdateClick = async () => {
-    const accessToken = sessionStorage['accessToken']
-    const headers = {'x-access-token': "Bearer " + accessToken}
-    const result = await axios.put(`${EMPLOYEES_URL}/${paramsId}`, employee, { headers: headers })
+    const headers = getHeaders()
+    const result = await axios.put(`${EMPLOYEES_URL}/${employeeId}`, employee, { headers: headers })
     console.log("result",result)
   }
 
+  // delete employee
   const handleDeleteClick = async () => {
-    const accessToken = sessionStorage['accessToken']
-    const headers = {'x-access-token': "Bearer " + accessToken}
-    const result = await axios.delete(`${EMPLOYEES_URL}/${paramsId}`,{ headers: headers })
+    const headers = getHeaders()
+    const result = await axios.delete(`${EMPLOYEES_URL}/${employeeId}`,{ headers: headers })
     console.log("result",result)
     navigate('/employees')
   }
@@ -113,10 +128,10 @@ function EditEmployee() {
         <ul>
         {
           assignedShifts
-          .map(shift => {
+          ?.map(shift => {
             return (
               <li key={shift._id}>
-                {shift.date?.replace(/T.*Z/g,'') +' '+ shift.startingHour +'-'+ shift.endingHour}
+                {shift.date +' '+ shift.startingHour +'-'+ shift.endingHour}
               </li>
             )
           })
@@ -130,7 +145,7 @@ function EditEmployee() {
             .map(shift => {
               return (
                 <option key={shift._id} value={shift._id}>
-                  {shift.date?.replace(/T.*Z/g,'') +' '+ shift.startingHour +'-'+ shift.endingHour}
+                  {shift.date +' '+ shift.startingHour +'-'+ shift.endingHour}
                 </option>
               )
             })

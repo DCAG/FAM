@@ -1,45 +1,29 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
+import { getHeaders } from '../utils/utils'
 import useAuth from '../utils/useAuth'
 
 const EMPLOYEES_CREATE_URL = 'http://localhost:3000/employees/create'
 const DEPARTMENTS_URL = 'http://localhost:3000/departments'
 
 function NewEmployee() {
+  const [departments, setDepartments] = useState([])
+  const [employee, setEmployee] = useState({firstName: '', lastName: ''})
 
-  const [departments, setDepartments] = useState([]) // {id,name,manager}
-  const [selectedDepartment, setSelectedDepartment] = useState('')
-  
   const navigate = useNavigate()
-
   const {logoutUser} = useAuth();
-
-  const [employee, setEmployee] = useState({})
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    const result = await axios.post(`${EMPLOYEES_CREATE_URL}`,employee)
-    console.log("result",result)
-    if(result.status==201){
-      navigate(`/employees/${result.data._id}/edit`)
-    }
-  }
 
   useEffect(() => {
     const getDepartments = async () => {
-      const accessToken = sessionStorage['accessToken']
-      const headers = {'x-access-token': "Bearer " + accessToken}
+      const headers = getHeaders()
       try{
         const {data} = await axios.get(DEPARTMENTS_URL, { headers: headers })
         setDepartments(data)
       }catch(error){
         if(error?.response?.data?.name=="DAILY_MAX_ACTIONS_REACHED"){
-          // should i return an error component instead?
-          localStorage['lastError'] = error?.response?.data?.message  
-          // logout:
-          //sessionStorage.clear() // TODO: replace with logout function (that calls this probably...)
+          localStorage['lastError'] = error.response.data.message  
           logoutUser()
-          //return (<Error message={error.response.data.message} action={error.response.data.action} />)
         }
         else{
           localStorage['lastError'] = error
@@ -51,6 +35,16 @@ function NewEmployee() {
     getDepartments()
     
   },[])
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const headers = getHeaders()
+    const result = await axios.post(`${EMPLOYEES_CREATE_URL}`,employee, {headers: headers})
+    console.log("result",result)
+    if(result.status==201){
+      navigate(`/employees/${result.data._id}/edit`)
+    }
+  }
 
   return (
     <div>
