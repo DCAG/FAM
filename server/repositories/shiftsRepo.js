@@ -1,7 +1,7 @@
 const shifts = require('../models/shiftsModel')
 
 const getAll = () => {
-    return shifts.find()
+    return shifts.find().populate('employees').exec()
 }
 
 const getById = (id) => {

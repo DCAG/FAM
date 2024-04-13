@@ -1,7 +1,7 @@
-
-const errorActionsRedirectMap = {
-    "login": '/',
-    "logout": '/'
+const getHeaders = () => {
+    const accessToken = sessionStorage['accessToken']
+    const headers = {'x-access-token': "Bearer " + accessToken}
+    return headers
 }
 
-export {errorActionsRedirectMap}
+export {getHeaders}

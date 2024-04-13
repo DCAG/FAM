@@ -12,9 +12,7 @@ router.get('/:id', async (req,res) => {
     try{
 
         const {id} = req.params
-        console.log(id)
         const employee = await employeesSvc.getById(id)
-        console.log(`/employees/${id}:`, employee)
         res.send(employee)
     }
     catch(err){
@@ -25,7 +23,6 @@ router.get('/:id', async (req,res) => {
 router.post('/create', async (req,res) => {
     try{
         const body = req.body;
-        console.log(body)
         const employee = await employeesSvc.create(body)
         res.status(201).send(employee)
     }
@@ -40,7 +37,18 @@ router.put('/:id', async (req,res) => {
         const objectToUpdate = req.body
         const {id} = req.params
         const result = await employeesSvc.update(id,objectToUpdate)
-        console.log("put result",result?._doc)
+        res.send({data: result?._doc, description: "previous object"})
+    } 
+    catch(err){
+        console.log(err)
+        res.send(err)
+    }
+})
+
+router.delete('/:id', async (req,res) => {
+    try {
+        const {id} = req.params
+        const result = await employeesSvc.remove(id)
         res.send({data: result?._doc, description: "previous object"})
     } 
     catch(err){
