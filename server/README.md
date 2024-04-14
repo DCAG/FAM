@@ -45,6 +45,8 @@
 
 9. logfile will be written in the server directory with the name `actions.log.json`
 
+   !["user actions logs"](../images/actions.logs.png)
+
 10. login with these credentials (according the the users specified in the ./init/users.json)
     passwords are the emails from [https://jsonplaceholder.typicode.com/users]
 
