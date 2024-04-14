@@ -39,14 +39,18 @@
     node ./resetActionsCounters.task.js
     ```
 
-8. logfile will be written in the server directory with the name `actions.log.json`
+    result should look like this:
 
-9. login with these credentials (according the the users specified in the ./init/users.json)
+   !["reset user actions result"](../images/server_resetUserActions.png)
+
+9. logfile will be written in the server directory with the name `actions.log.json`
+
+10. login with these credentials (according the the users specified in the ./init/users.json)
     passwords are the emails from [https://jsonplaceholder.typicode.com/users]
 
     a. Leanne Graham
 
-    ```json
+    ```javascript
     {
       username: "Bret", // stored in the db
       password: "Sincere@april.biz" // NOT stored in the db
@@ -55,7 +59,7 @@
 
     b. Ervin Howell
 
-    ```json
+    ```javascript
     {
       username: "Antonette", 
       password: "Shanna@melissa.tv" 
