@@ -4,8 +4,14 @@ const shiftsService = require("../services/shiftsService")
 const router = express.Router()
 
 router.get('/', async (req,res) => {
+    try{
     const shifts = await shiftsService.getAll()
     res.send(shifts)
+    } 
+    catch(err){
+        console.log(err)
+        res.send(err)
+    }
 })
 
 router.put('/:id', async (req,res) => {

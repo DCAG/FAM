@@ -15,7 +15,7 @@ import useAuth from './utils/useAuth'
 
 function App() {
   const navigate = useNavigate()
-  const {logout} = useAuth()
+  const {logoutUser} = useAuth()
 
   return (
     <>
@@ -25,7 +25,7 @@ function App() {
         </center>
         <div className={!sessionStorage['accessToken']?'hide_section--default':''}>
           {sessionStorage["fullName"]??""} <br />
-          <button onClick={() => {logout(); navigate('/')}}>Logout</button>
+          <button onClick={() => {logoutUser(); navigate('/')}}>Logout</button>
         </div>
         <nav className='main-nav'>
           <ul className='main-nav__items'>

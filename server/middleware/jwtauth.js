@@ -14,7 +14,7 @@ module.exports = (req, res, next) => {
     //Extracting token from authorization header
     const authorization = req.headers['x-access-token'] //req.headers;
     // Checking if authorization header is present
-    //authorization === 'Bearer "token"'
+    // authorization expected to be === 'Bearer "token"'
     if (!authorization) {
         console.log('must be logged in')
         return res.status(403).send({

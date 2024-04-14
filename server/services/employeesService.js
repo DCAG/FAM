@@ -21,7 +21,7 @@ const remove = async (id) => {
     //REQUIREMENT: A “Delete” button to delete all employee’s data
     // (and his related data, like shifts) from the server.
 
-    // Note: consider removing references to employee from all departments they manage
+    // future: consider removing references to employee from all departments they manage
 
     //Step 1: find all shifts THIS employee is assigned to
     const employee = await employeesRepo.getById(id)

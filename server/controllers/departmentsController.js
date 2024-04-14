@@ -4,8 +4,14 @@ const departmentsService = require("../services/departmentsService")
 const router = express.Router()
 
 router.get('/', async (req,res) => {
-    const departments = await departmentsService.getAll()
-    res.send(departments)
+    try{
+        const departments = await departmentsService.getAll()
+        res.send(departments)
+    }
+    catch(err){
+        console.log(err)
+        res.send(err)
+    }
 })
 
 router.get('/:id', async (req,res) => {
@@ -18,7 +24,8 @@ router.get('/:id', async (req,res) => {
         res.send(department)
     }
     catch(err){
-        res.sendStatus(404)
+        console.log(err)
+        res.send(err)
     }
 })
 

@@ -8,14 +8,13 @@ const router = express.Router()
 router.post('/login', async (req,res) => {
     const {username, password} = req.body
 
-    console.log("inside /login")
+    console.log("location[/auth/login]")
 
-    //check username and password in db
+    //check username and password in db (and in jsonplaceholder in this example...)
     if(await usersService.verifyCredentials(username, password)){
         const user = (await usersService.getByUsername(username))
-        console.log("[userId] inside /auth controller", user.id)
+        console.log("location[/auth/login]/user.id", user.id)
         const JWT_SECRET = process.env.JWT_SECRET
-        console.log("JWT_SECRET",JWT_SECRET)
         const token = jwt.sign(
             {user},
             JWT_SECRET,
@@ -25,7 +24,7 @@ router.post('/login', async (req,res) => {
         res.send({accessToken: token, user: user})
     }
     else{
-        console.log("wrong credentials")
+        console.log("location[/auth/login]/error403:wrong credentials")
         res.status(403).send("wrong credentials")
     }
 })

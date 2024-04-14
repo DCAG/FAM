@@ -5,7 +5,7 @@ const userSchema = new mongoose.Schema(
         fullName: {type:String, required:true},
         numOfActions: Number,
         maxActions: Number,
-        // jsonplaceholder - for authentication
+        // username from jsonplaceholder - for authentication
         username: {type:String, required: true}
     },
     { versionKey: false }
