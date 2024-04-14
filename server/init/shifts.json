@@ -1,516 +1,619 @@
-[
-    {
-        "date": "2024-02-02",
-        "startingHour": 18,
-        "endingHour": 19,
-        "assignedEmployees": [
-            "65e115ec1bf3b969f2e24808",
-            "65e115ed1bf3b969f2e2480f",
-            "65e115ed1bf3b969f2e24813",
-            "65e115ec1bf3b969f2e24809",
-            "65e115ec1bf3b969f2e2480b"
-        ]
-    },
-    {
-        "date": "2024-01-05",
-        "startingHour": 10,
-        "endingHour": 23,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24815",
-            "65e115ec1bf3b969f2e24805",
-            "65e115ec1bf3b969f2e24806",
-            "65e115ec1bf3b969f2e2480b"
-        ]
-    },
-    {
-        "date": "2024-01-03",
-        "startingHour": 7,
-        "endingHour": 16,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24817",
-            "65e115ed1bf3b969f2e2481e"
-        ]
-    },
-    {
-        "date": "2024-01-10",
-        "startingHour": 10,
-        "endingHour": 12,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24818"
-        ]
-    },
-    {
-        "date": "2024-01-23",
-        "startingHour": 10,
-        "endingHour": 23,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24817",
-            "65e115ed1bf3b969f2e2481d",
-            "65e115ec1bf3b969f2e24809"
-        ]
-    },
-    {
-        "date": "2024-01-27",
-        "startingHour": 12,
-        "endingHour": 13,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e2481b",
-            "65e115ed1bf3b969f2e24822",
-            "65e115ed1bf3b969f2e24818"
-        ]
-    },
-    {
-        "date": "2024-02-08",
-        "startingHour": 17,
-        "endingHour": 18,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24814",
-            "65e115ed1bf3b969f2e24810"
-        ]
-    },
-    {
-        "date": "2024-02-28",
-        "startingHour": 6,
-        "endingHour": 20,
-        "assignedEmployees": [
-            "65e115ec1bf3b969f2e24807"
-        ]
-    },
-    {
-        "date": "2024-01-01",
-        "startingHour": 13,
-        "endingHour": 20,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e2480e",
-            "65e115ec1bf3b969f2e2480b"
-        ]
-    },
-    {
-        "date": "2024-01-27",
-        "startingHour": 16,
-        "endingHour": 17,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e2480c",
-            "65e115ec1bf3b969f2e24808",
-            "65e115ec1bf3b969f2e24806",
-            "65e115ed1bf3b969f2e24815",
-            "65e115ed1bf3b969f2e24816"
-        ]
-    },
-    {
-        "date": "2024-01-29",
-        "startingHour": 10,
-        "endingHour": 20,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e2481e",
-            "65e115ed1bf3b969f2e2481d",
-            "65e115ed1bf3b969f2e24821",
-            "65e115ed1bf3b969f2e2481b"
-        ]
-    },
-    {
-        "date": "2024-02-17",
-        "startingHour": 10,
-        "endingHour": 18,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24815",
-            "65e115ec1bf3b969f2e2480a",
-            "65e115ed1bf3b969f2e24816",
-            "65e115ed1bf3b969f2e2480c",
-            "65e115ec1bf3b969f2e2480b"
-        ]
-    },
-    {
-        "date": "2024-01-18",
-        "startingHour": 7,
-        "endingHour": 9,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24821",
-            "65e115ed1bf3b969f2e24812",
-            "65e115ed1bf3b969f2e2481e",
-            "65e115ed1bf3b969f2e2480e",
-            "65e115ed1bf3b969f2e24819"
-        ]
-    },
-    {
-        "date": "2024-01-30",
-        "startingHour": 19,
-        "endingHour": 22,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24810"
-        ]
-    },
-    {
-        "date": "2024-01-13",
-        "startingHour": 13,
-        "endingHour": 16,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e2481f",
-            "65e115ed1bf3b969f2e2481a"
-        ]
-    },
-    {
-        "date": "2024-01-21",
-        "startingHour": 4,
-        "endingHour": 18,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24820"
-        ]
-    },
-    {
-        "date": "2024-01-12",
-        "startingHour": 12,
-        "endingHour": 19,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24820",
-            "65e115ed1bf3b969f2e24810",
-            "65e115ec1bf3b969f2e24807",
-            "65e115ed1bf3b969f2e24814",
-            "65e115ed1bf3b969f2e24818"
-        ]
-    },
-    {
-        "date": "2024-02-23",
-        "startingHour": 7,
-        "endingHour": 12,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24819",
-            "65e115ed1bf3b969f2e24810",
-            "65e115ed1bf3b969f2e24820"
-        ]
-    },
-    {
-        "date": "2024-02-22",
-        "startingHour": 7,
-        "endingHour": 21,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e2481e",
-            "65e115ed1bf3b969f2e2480d",
-            "65e115ed1bf3b969f2e24814"
-        ]
-    },
-    {
-        "date": "2024-01-11",
-        "startingHour": 19,
-        "endingHour": 20,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e2481d",
-            "65e115ec1bf3b969f2e2480b",
-            "65e115ec1bf3b969f2e24808",
-            "65e115ec1bf3b969f2e24809"
-        ]
-    },
-    {
-        "date": "2024-02-09",
-        "startingHour": 4,
-        "endingHour": 16,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24812",
-            "65e115ed1bf3b969f2e2480e",
-            "65e115ed1bf3b969f2e24817"
-        ]
-    },
-    {
-        "date": "2024-01-28",
-        "startingHour": 5,
-        "endingHour": 16,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24810",
-            "65e115ec1bf3b969f2e24808",
-            "65e115ed1bf3b969f2e2480c",
-            "65e115ed1bf3b969f2e24814"
-        ]
-    },
-    {
-        "date": "2024-01-04",
-        "startingHour": 17,
-        "endingHour": 18,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24811",
-            "65e115ed1bf3b969f2e24822"
-        ]
-    },
-    {
-        "date": "2024-01-29",
-        "startingHour": 15,
-        "endingHour": 18,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e2480f",
-            "65e115ec1bf3b969f2e24808"
-        ]
-    },
-    {
-        "date": "2024-02-22",
-        "startingHour": 20,
-        "endingHour": 21,
-        "assignedEmployees": [
-            "65e115ec1bf3b969f2e24807",
-            "65e115ed1bf3b969f2e24811",
-            "65e115ed1bf3b969f2e24810"
-        ]
-    },
-    {
-        "date": "2024-02-15",
-        "startingHour": 19,
-        "endingHour": 20,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e2481f",
-            "65e115ed1bf3b969f2e24814",
-            "65e115ed1bf3b969f2e2480d"
-        ]
-    },
-    {
-        "date": "2024-01-05",
-        "startingHour": 8,
-        "endingHour": 14,
-        "assignedEmployees": [
-            "65e115ec1bf3b969f2e2480b",
-            "65e115ed1bf3b969f2e24820",
-            "65e115ed1bf3b969f2e2480d",
-            "65e115ed1bf3b969f2e24818"
-        ]
-    },
-    {
-        "date": "2024-01-17",
-        "startingHour": 18,
-        "endingHour": 21,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24812",
-            "65e115ec1bf3b969f2e24806",
-            "65e115ec1bf3b969f2e24805",
-            "65e115ed1bf3b969f2e24819"
-        ]
-    },
-    {
-        "date": "2024-01-29",
-        "startingHour": 19,
-        "endingHour": 21,
-        "assignedEmployees": [
-            "65e115ec1bf3b969f2e24806",
-            "65e115ed1bf3b969f2e2481b",
-            "65e115ec1bf3b969f2e24809",
-            "65e115ed1bf3b969f2e24810",
-            "65e115ed1bf3b969f2e2480e"
-        ]
-    },
-    {
-        "date": "2024-02-26",
-        "startingHour": 4,
-        "endingHour": 7,
-        "assignedEmployees": [
-            "65e115ec1bf3b969f2e2480b",
-            "65e115ec1bf3b969f2e24806",
-            "65e115ed1bf3b969f2e24811"
-        ]
-    },
-    {
-        "date": "2024-01-09",
-        "startingHour": 18,
-        "endingHour": 22,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24813",
-            "65e115ed1bf3b969f2e24811",
-            "65e115ed1bf3b969f2e24815",
-            "65e115ed1bf3b969f2e24814",
-            "65e115ec1bf3b969f2e24808"
-        ]
-    },
-    {
-        "date": "2024-02-28",
-        "startingHour": 11,
-        "endingHour": 12,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e2480f",
-            "65e115ec1bf3b969f2e2480a"
-        ]
-    },
-    {
-        "date": "2024-02-20",
-        "startingHour": 2,
-        "endingHour": 8,
-        "assignedEmployees": [
-            "65e115ec1bf3b969f2e2480a"
-        ]
-    },
-    {
-        "date": "2024-02-28",
-        "startingHour": 4,
-        "endingHour": 7,
-        "assignedEmployees": [
-            "65e115ec1bf3b969f2e24805",
-            "65e115ed1bf3b969f2e24814",
-            "65e115ec1bf3b969f2e24809",
-            "65e115ed1bf3b969f2e2481d"
-        ]
-    },
-    {
-        "date": "2024-01-21",
-        "startingHour": 19,
-        "endingHour": 21,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24815",
-            "65e115ec1bf3b969f2e24805",
-            "65e115ed1bf3b969f2e2480c",
-            "65e115ed1bf3b969f2e24811",
-            "65e115ed1bf3b969f2e2481e"
-        ]
-    },
-    {
-        "date": "2024-01-28",
-        "startingHour": 5,
-        "endingHour": 20,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24820",
-            "65e115ed1bf3b969f2e2481e",
-            "65e115ed1bf3b969f2e24813",
-            "65e115ed1bf3b969f2e24815",
-            "65e115ed1bf3b969f2e24819"
-        ]
-    },
-    {
-        "date": "2024-01-17",
-        "startingHour": 2,
-        "endingHour": 5,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e2480d",
-            "65e115ed1bf3b969f2e24814",
-            "65e115ec1bf3b969f2e24805",
-            "65e115ed1bf3b969f2e2481a",
-            "65e115ed1bf3b969f2e2481e"
-        ]
-    },
-    {
-        "date": "2024-02-09",
-        "startingHour": 18,
-        "endingHour": 23,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e2480c",
-            "65e115ed1bf3b969f2e24816",
-            "65e115ed1bf3b969f2e24810",
-            "65e115ed1bf3b969f2e2481f"
-        ]
-    },
-    {
-        "date": "2024-02-01",
-        "startingHour": 4,
-        "endingHour": 12,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e2481e",
-            "65e115ed1bf3b969f2e24820",
-            "65e115ec1bf3b969f2e24805",
-            "65e115ed1bf3b969f2e2480d"
-        ]
-    },
-    {
-        "date": "2024-01-01",
-        "startingHour": 10,
-        "endingHour": 18,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e2480f",
-            "65e115ed1bf3b969f2e24821",
-            "65e115ec1bf3b969f2e2480b",
-            "65e115ed1bf3b969f2e24815"
-        ]
-    },
-    {
-        "date": "2024-02-09",
-        "startingHour": 18,
-        "endingHour": 21,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24811",
-            "65e115ed1bf3b969f2e24815",
-            "65e115ed1bf3b969f2e24813",
-            "65e115ed1bf3b969f2e2481a"
-        ]
-    },
-    {
-        "date": "2024-01-11",
-        "startingHour": 11,
-        "endingHour": 16,
-        "assignedEmployees": [
-            "65e115ec1bf3b969f2e2480a",
-            "65e115ed1bf3b969f2e24817",
-            "65e115ec1bf3b969f2e2480b",
-            "65e115ed1bf3b969f2e24815"
-        ]
-    },
-    {
-        "date": "2024-02-02",
-        "startingHour": 0,
-        "endingHour": 7,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e2481d",
-            "65e115ed1bf3b969f2e24814"
-        ]
-    },
-    {
-        "date": "2024-01-02",
-        "startingHour": 20,
-        "endingHour": 22,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24811",
-            "65e115ed1bf3b969f2e2481b",
-            "65e115ed1bf3b969f2e24820",
-            "65e115ed1bf3b969f2e24818",
-            "65e115ed1bf3b969f2e2480c"
-        ]
-    },
-    {
-        "date": "2024-02-12",
-        "startingHour": 16,
-        "endingHour": 22,
-        "assignedEmployees": [
-            "65e115ec1bf3b969f2e2480b",
-            "65e115ed1bf3b969f2e24819"
-        ]
-    },
-    {
-        "date": "2024-01-04",
-        "startingHour": 7,
-        "endingHour": 23,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24822",
-            "65e115ec1bf3b969f2e24808",
-            "65e115ed1bf3b969f2e24816",
-            "65e115ed1bf3b969f2e2481f"
-        ]
-    },
-    {
-        "date": "2024-01-29",
-        "startingHour": 7,
-        "endingHour": 21,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e2481a",
-            "65e115ed1bf3b969f2e2481d",
-            "65e115ed1bf3b969f2e24812",
-            "65e115ed1bf3b969f2e24817",
-            "65e115ed1bf3b969f2e2481b"
-        ]
-    },
-    {
-        "date": "2024-01-14",
-        "startingHour": 12,
-        "endingHour": 22,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e24814",
-            "65e115ed1bf3b969f2e24810"
-        ]
-    },
-    {
-        "date": "2024-02-04",
-        "startingHour": 8,
-        "endingHour": 15,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e2481f",
-            "65e115ed1bf3b969f2e2480e"
-        ]
-    },
-    {
-        "date": "2024-02-04",
-        "startingHour": 13,
-        "endingHour": 14,
-        "assignedEmployees": [
-            "65e115ed1bf3b969f2e2481e"
-        ]
-    }
-]
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5ab"),
+    "date" : ISODate("2024-02-02T00:00:00.000+0000"),
+    "startingHour" : NumberInt(18),
+    "endingHour" : NumberInt(19),
+    "employees" : [
+        ObjectId("65e115ec1bf3b969f2e24808"),
+        ObjectId("65e115ed1bf3b969f2e2480f"),
+        ObjectId("65e115ed1bf3b969f2e24813"),
+        ObjectId("65e115ec1bf3b969f2e24809"),
+        ObjectId("65e115ec1bf3b969f2e2480b")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5ac"),
+    "date" : ISODate("2024-01-05T00:00:00.000+0000"),
+    "startingHour" : NumberInt(10),
+    "endingHour" : NumberInt(23),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24815"),
+        ObjectId("65e115ec1bf3b969f2e24805"),
+        ObjectId("65e115ec1bf3b969f2e24806"),
+        ObjectId("65e115ec1bf3b969f2e2480b"),
+        ObjectId("6613ced2b59dc419cc7dae6d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5ad"),
+    "date" : ISODate("2024-01-03T00:00:00.000+0000"),
+    "startingHour" : NumberInt(7),
+    "endingHour" : NumberInt(16),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24817"),
+        ObjectId("65e115ed1bf3b969f2e2481e"),
+        ObjectId("6613ced2b59dc419cc7dae6d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5ae"),
+    "date" : ISODate("2024-01-10T00:00:00.000+0000"),
+    "startingHour" : NumberInt(10),
+    "endingHour" : NumberInt(12),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24818"),
+        ObjectId("6613ced2b59dc419cc7dae6d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5af"),
+    "date" : ISODate("2024-01-23T00:00:00.000+0000"),
+    "startingHour" : NumberInt(10),
+    "endingHour" : NumberInt(23),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24817"),
+        ObjectId("65e115ed1bf3b969f2e2481d"),
+        ObjectId("65e115ec1bf3b969f2e24809")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5b0"),
+    "date" : ISODate("2024-01-27T00:00:00.000+0000"),
+    "startingHour" : NumberInt(12),
+    "endingHour" : NumberInt(13),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e2481b"),
+        ObjectId("65e115ed1bf3b969f2e24822"),
+        ObjectId("65e115ed1bf3b969f2e24818"),
+        ObjectId("65e115ec1bf3b969f2e24805")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5b1"),
+    "date" : ISODate("2024-02-08T00:00:00.000+0000"),
+    "startingHour" : NumberInt(17),
+    "endingHour" : NumberInt(18),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24814"),
+        ObjectId("65e115ed1bf3b969f2e24810")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5b2"),
+    "date" : ISODate("2024-02-28T00:00:00.000+0000"),
+    "startingHour" : NumberInt(6),
+    "endingHour" : NumberInt(20),
+    "employees" : [
+        ObjectId("65e115ec1bf3b969f2e24807"),
+        ObjectId("6613ced2b59dc419cc7dae6d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5b3"),
+    "date" : ISODate("2024-01-01T00:00:00.000+0000"),
+    "startingHour" : NumberInt(13),
+    "endingHour" : NumberInt(20),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e2480e"),
+        ObjectId("65e115ec1bf3b969f2e2480b"),
+        ObjectId("6613ced2b59dc419cc7dae6d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5b4"),
+    "date" : ISODate("2024-01-27T00:00:00.000+0000"),
+    "startingHour" : NumberInt(16),
+    "endingHour" : NumberInt(17),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e2480c"),
+        ObjectId("65e115ec1bf3b969f2e24808"),
+        ObjectId("65e115ec1bf3b969f2e24806"),
+        ObjectId("65e115ed1bf3b969f2e24815"),
+        ObjectId("65e115ed1bf3b969f2e24816")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5b5"),
+    "date" : ISODate("2024-01-29T00:00:00.000+0000"),
+    "startingHour" : NumberInt(10),
+    "endingHour" : NumberInt(20),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e2481e"),
+        ObjectId("65e115ed1bf3b969f2e2481d"),
+        ObjectId("65e115ed1bf3b969f2e24821"),
+        ObjectId("65e115ed1bf3b969f2e2481b"),
+        ObjectId("6613ced2b59dc419cc7dae6d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5b6"),
+    "date" : ISODate("2024-02-17T00:00:00.000+0000"),
+    "startingHour" : NumberInt(10),
+    "endingHour" : NumberInt(18),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24815"),
+        ObjectId("65e115ec1bf3b969f2e2480a"),
+        ObjectId("65e115ed1bf3b969f2e24816"),
+        ObjectId("65e115ed1bf3b969f2e2480c"),
+        ObjectId("65e115ec1bf3b969f2e2480b")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5b7"),
+    "date" : ISODate("2024-01-18T00:00:00.000+0000"),
+    "startingHour" : NumberInt(7),
+    "endingHour" : NumberInt(9),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24821"),
+        ObjectId("65e115ed1bf3b969f2e24812"),
+        ObjectId("65e115ed1bf3b969f2e2481e"),
+        ObjectId("65e115ed1bf3b969f2e2480e"),
+        ObjectId("65e115ed1bf3b969f2e24819"),
+        ObjectId("65e115ec1bf3b969f2e24806"),
+        ObjectId("6613ced2b59dc419cc7dae6d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5b8"),
+    "date" : ISODate("2024-01-30T00:00:00.000+0000"),
+    "startingHour" : NumberInt(19),
+    "endingHour" : NumberInt(22),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24810")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5b9"),
+    "date" : ISODate("2024-01-13T00:00:00.000+0000"),
+    "startingHour" : NumberInt(13),
+    "endingHour" : NumberInt(16),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e2481f"),
+        ObjectId("65e115ed1bf3b969f2e2481a"),
+        ObjectId("661abb0294136802f49e0c53")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5ba"),
+    "date" : ISODate("2024-01-21T00:00:00.000+0000"),
+    "startingHour" : NumberInt(4),
+    "endingHour" : NumberInt(18),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24820")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5bb"),
+    "date" : ISODate("2024-01-12T00:00:00.000+0000"),
+    "startingHour" : NumberInt(12),
+    "endingHour" : NumberInt(19),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24820"),
+        ObjectId("65e115ed1bf3b969f2e24810"),
+        ObjectId("65e115ec1bf3b969f2e24807"),
+        ObjectId("65e115ed1bf3b969f2e24814"),
+        ObjectId("65e115ed1bf3b969f2e24818"),
+        ObjectId("6613ced2b59dc419cc7dae6d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5bc"),
+    "date" : ISODate("2024-02-23T00:00:00.000+0000"),
+    "startingHour" : NumberInt(7),
+    "endingHour" : NumberInt(12),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24819"),
+        ObjectId("65e115ed1bf3b969f2e24810"),
+        ObjectId("65e115ed1bf3b969f2e24820")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5bd"),
+    "date" : ISODate("2024-02-22T00:00:00.000+0000"),
+    "startingHour" : NumberInt(7),
+    "endingHour" : NumberInt(21),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e2481e"),
+        ObjectId("65e115ed1bf3b969f2e2480d"),
+        ObjectId("65e115ed1bf3b969f2e24814")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5be"),
+    "date" : ISODate("2024-01-11T00:00:00.000+0000"),
+    "startingHour" : NumberInt(19),
+    "endingHour" : NumberInt(20),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e2481d"),
+        ObjectId("65e115ec1bf3b969f2e2480b"),
+        ObjectId("65e115ec1bf3b969f2e24808"),
+        ObjectId("65e115ec1bf3b969f2e24809"),
+        ObjectId("6613ced2b59dc419cc7dae6d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5bf"),
+    "date" : ISODate("2024-02-09T00:00:00.000+0000"),
+    "startingHour" : NumberInt(4),
+    "endingHour" : NumberInt(16),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24812"),
+        ObjectId("65e115ed1bf3b969f2e2480e"),
+        ObjectId("65e115ed1bf3b969f2e24817")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5c0"),
+    "date" : ISODate("2024-01-28T00:00:00.000+0000"),
+    "startingHour" : NumberInt(5),
+    "endingHour" : NumberInt(16),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24810"),
+        ObjectId("65e115ec1bf3b969f2e24808"),
+        ObjectId("65e115ed1bf3b969f2e2480c"),
+        ObjectId("65e115ed1bf3b969f2e24814")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5c1"),
+    "date" : ISODate("2024-01-04T00:00:00.000+0000"),
+    "startingHour" : NumberInt(17),
+    "endingHour" : NumberInt(18),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24811"),
+        ObjectId("65e115ed1bf3b969f2e24822"),
+        ObjectId("6613ced2b59dc419cc7dae6d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5c2"),
+    "date" : ISODate("2024-01-29T00:00:00.000+0000"),
+    "startingHour" : NumberInt(15),
+    "endingHour" : NumberInt(18),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e2480f"),
+        ObjectId("65e115ec1bf3b969f2e24808"),
+        ObjectId("6613ced2b59dc419cc7dae6d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5c3"),
+    "date" : ISODate("2024-02-22T00:00:00.000+0000"),
+    "startingHour" : NumberInt(20),
+    "endingHour" : NumberInt(21),
+    "employees" : [
+        ObjectId("65e115ec1bf3b969f2e24807"),
+        ObjectId("65e115ed1bf3b969f2e24811"),
+        ObjectId("65e115ed1bf3b969f2e24810")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5c4"),
+    "date" : ISODate("2024-02-15T00:00:00.000+0000"),
+    "startingHour" : NumberInt(19),
+    "endingHour" : NumberInt(20),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e2481f"),
+        ObjectId("65e115ed1bf3b969f2e24814"),
+        ObjectId("65e115ed1bf3b969f2e2480d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5c5"),
+    "date" : ISODate("2024-01-05T00:00:00.000+0000"),
+    "startingHour" : NumberInt(8),
+    "endingHour" : NumberInt(14),
+    "employees" : [
+        ObjectId("65e115ec1bf3b969f2e2480b"),
+        ObjectId("65e115ed1bf3b969f2e24820"),
+        ObjectId("65e115ed1bf3b969f2e2480d"),
+        ObjectId("65e115ed1bf3b969f2e24818")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5c6"),
+    "date" : ISODate("2024-01-17T00:00:00.000+0000"),
+    "startingHour" : NumberInt(18),
+    "endingHour" : NumberInt(21),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24812"),
+        ObjectId("65e115ec1bf3b969f2e24806"),
+        ObjectId("65e115ec1bf3b969f2e24805"),
+        ObjectId("65e115ed1bf3b969f2e24819"),
+        ObjectId("661abb0294136802f49e0c53")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5c7"),
+    "date" : ISODate("2024-01-29T00:00:00.000+0000"),
+    "startingHour" : NumberInt(19),
+    "endingHour" : NumberInt(21),
+    "employees" : [
+        ObjectId("65e115ec1bf3b969f2e24806"),
+        ObjectId("65e115ed1bf3b969f2e2481b"),
+        ObjectId("65e115ec1bf3b969f2e24809"),
+        ObjectId("65e115ed1bf3b969f2e24810"),
+        ObjectId("65e115ed1bf3b969f2e2480e"),
+        ObjectId("6613ced2b59dc419cc7dae6d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5c8"),
+    "date" : ISODate("2024-02-26T00:00:00.000+0000"),
+    "startingHour" : NumberInt(4),
+    "endingHour" : NumberInt(7),
+    "employees" : [
+        ObjectId("65e115ec1bf3b969f2e2480b"),
+        ObjectId("65e115ec1bf3b969f2e24806"),
+        ObjectId("65e115ed1bf3b969f2e24811")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5c9"),
+    "date" : ISODate("2024-01-09T00:00:00.000+0000"),
+    "startingHour" : NumberInt(18),
+    "endingHour" : NumberInt(22),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24813"),
+        ObjectId("65e115ed1bf3b969f2e24811"),
+        ObjectId("65e115ed1bf3b969f2e24815"),
+        ObjectId("65e115ed1bf3b969f2e24814"),
+        ObjectId("65e115ec1bf3b969f2e24808")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5ca"),
+    "date" : ISODate("2024-02-28T00:00:00.000+0000"),
+    "startingHour" : NumberInt(11),
+    "endingHour" : NumberInt(12),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e2480f"),
+        ObjectId("65e115ec1bf3b969f2e2480a")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5cb"),
+    "date" : ISODate("2024-02-20T00:00:00.000+0000"),
+    "startingHour" : NumberInt(2),
+    "endingHour" : NumberInt(8),
+    "employees" : [
+        ObjectId("65e115ec1bf3b969f2e2480a")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5cc"),
+    "date" : ISODate("2024-02-28T00:00:00.000+0000"),
+    "startingHour" : NumberInt(4),
+    "endingHour" : NumberInt(7),
+    "employees" : [
+        ObjectId("65e115ec1bf3b969f2e24805"),
+        ObjectId("65e115ed1bf3b969f2e24814"),
+        ObjectId("65e115ec1bf3b969f2e24809"),
+        ObjectId("65e115ed1bf3b969f2e2481d"),
+        ObjectId("6613ced2b59dc419cc7dae6d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5cd"),
+    "date" : ISODate("2024-01-21T00:00:00.000+0000"),
+    "startingHour" : NumberInt(19),
+    "endingHour" : NumberInt(21),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24815"),
+        ObjectId("65e115ec1bf3b969f2e24805"),
+        ObjectId("65e115ed1bf3b969f2e2480c"),
+        ObjectId("65e115ed1bf3b969f2e24811"),
+        ObjectId("65e115ed1bf3b969f2e2481e")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5ce"),
+    "date" : ISODate("2024-01-28T00:00:00.000+0000"),
+    "startingHour" : NumberInt(5),
+    "endingHour" : NumberInt(20),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24820"),
+        ObjectId("65e115ed1bf3b969f2e2481e"),
+        ObjectId("65e115ed1bf3b969f2e24813"),
+        ObjectId("65e115ed1bf3b969f2e24815"),
+        ObjectId("65e115ed1bf3b969f2e24819"),
+        ObjectId("6613ced2b59dc419cc7dae6d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5cf"),
+    "date" : ISODate("2024-01-17T00:00:00.000+0000"),
+    "startingHour" : NumberInt(2),
+    "endingHour" : NumberInt(5),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e2480d"),
+        ObjectId("65e115ed1bf3b969f2e24814"),
+        ObjectId("65e115ec1bf3b969f2e24805"),
+        ObjectId("65e115ed1bf3b969f2e2481a"),
+        ObjectId("65e115ed1bf3b969f2e2481e")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5d0"),
+    "date" : ISODate("2024-02-09T00:00:00.000+0000"),
+    "startingHour" : NumberInt(18),
+    "endingHour" : NumberInt(23),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e2480c"),
+        ObjectId("65e115ed1bf3b969f2e24816"),
+        ObjectId("65e115ed1bf3b969f2e24810"),
+        ObjectId("65e115ed1bf3b969f2e2481f")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5d1"),
+    "date" : ISODate("2024-02-01T00:00:00.000+0000"),
+    "startingHour" : NumberInt(4),
+    "endingHour" : NumberInt(12),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e2481e"),
+        ObjectId("65e115ed1bf3b969f2e24820"),
+        ObjectId("65e115ec1bf3b969f2e24805"),
+        ObjectId("65e115ed1bf3b969f2e2480d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5d2"),
+    "date" : ISODate("2024-01-01T00:00:00.000+0000"),
+    "startingHour" : NumberInt(10),
+    "endingHour" : NumberInt(18),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e2480f"),
+        ObjectId("65e115ed1bf3b969f2e24821"),
+        ObjectId("65e115ec1bf3b969f2e2480b"),
+        ObjectId("65e115ed1bf3b969f2e24815")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5d3"),
+    "date" : ISODate("2024-02-09T00:00:00.000+0000"),
+    "startingHour" : NumberInt(18),
+    "endingHour" : NumberInt(21),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24811"),
+        ObjectId("65e115ed1bf3b969f2e24815"),
+        ObjectId("65e115ed1bf3b969f2e24813"),
+        ObjectId("65e115ed1bf3b969f2e2481a"),
+        ObjectId("6613ced2b59dc419cc7dae6d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5d4"),
+    "date" : ISODate("2024-01-11T00:00:00.000+0000"),
+    "startingHour" : NumberInt(11),
+    "endingHour" : NumberInt(16),
+    "employees" : [
+        ObjectId("65e115ec1bf3b969f2e2480a"),
+        ObjectId("65e115ed1bf3b969f2e24817"),
+        ObjectId("65e115ec1bf3b969f2e2480b"),
+        ObjectId("65e115ed1bf3b969f2e24815")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5d5"),
+    "date" : ISODate("2024-02-02T00:00:00.000+0000"),
+    "startingHour" : NumberInt(0),
+    "endingHour" : NumberInt(7),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e2481d"),
+        ObjectId("65e115ed1bf3b969f2e24814"),
+        ObjectId("6613ced2b59dc419cc7dae6d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5d6"),
+    "date" : ISODate("2024-01-02T00:00:00.000+0000"),
+    "startingHour" : NumberInt(20),
+    "endingHour" : NumberInt(22),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24811"),
+        ObjectId("65e115ed1bf3b969f2e2481b"),
+        ObjectId("65e115ed1bf3b969f2e24820"),
+        ObjectId("65e115ed1bf3b969f2e24818"),
+        ObjectId("65e115ed1bf3b969f2e2480c"),
+        ObjectId("6613ced2b59dc419cc7dae6d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5d7"),
+    "date" : ISODate("2024-02-12T00:00:00.000+0000"),
+    "startingHour" : NumberInt(16),
+    "endingHour" : NumberInt(22),
+    "employees" : [
+        ObjectId("65e115ec1bf3b969f2e2480b"),
+        ObjectId("65e115ed1bf3b969f2e24819")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5d8"),
+    "date" : ISODate("2024-01-04T00:00:00.000+0000"),
+    "startingHour" : NumberInt(7),
+    "endingHour" : NumberInt(23),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24822"),
+        ObjectId("65e115ec1bf3b969f2e24808"),
+        ObjectId("65e115ed1bf3b969f2e24816"),
+        ObjectId("65e115ed1bf3b969f2e2481f"),
+        ObjectId("6613ced2b59dc419cc7dae6d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5d9"),
+    "date" : ISODate("2024-01-29T00:00:00.000+0000"),
+    "startingHour" : NumberInt(7),
+    "endingHour" : NumberInt(21),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e2481a"),
+        ObjectId("65e115ed1bf3b969f2e2481d"),
+        ObjectId("65e115ed1bf3b969f2e24812"),
+        ObjectId("65e115ed1bf3b969f2e24817"),
+        ObjectId("65e115ed1bf3b969f2e2481b")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5da"),
+    "date" : ISODate("2024-01-14T00:00:00.000+0000"),
+    "startingHour" : NumberInt(12),
+    "endingHour" : NumberInt(22),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24814"),
+        ObjectId("65e115ed1bf3b969f2e24810"),
+        ObjectId("65e115ec1bf3b969f2e24809")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5db"),
+    "date" : ISODate("2024-02-04T00:00:00.000+0000"),
+    "startingHour" : NumberInt(8),
+    "endingHour" : NumberInt(15),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e2481f"),
+        ObjectId("65e115ed1bf3b969f2e2480e"),
+        ObjectId("6613ced2b59dc419cc7dae6d")
+    ]
+}
+{
+    "_id" : ObjectId("6612b46247ee8ff25451f5dc"),
+    "date" : ISODate("2024-02-04T00:00:00.000+0000"),
+    "startingHour" : NumberInt(13),
+    "endingHour" : NumberInt(14),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e2481e"),
+        ObjectId("6613ced2b59dc419cc7dae6d")
+    ]
+}
+{
+    "_id" : ObjectId("6619a6be836b5d68877dbebf"),
+    "date" : ISODate("2024-04-13T00:00:00.000+0000"),
+    "startingHour" : NumberInt(0),
+    "endingHour" : NumberInt(10),
+    "employees" : [
+        ObjectId("661a92c7b39c6a738703998c")
+    ]
+}
+{
+    "_id" : ObjectId("6619a852836b5d68877dbeca"),
+    "date" : ISODate("2024-04-15T00:00:00.000+0000"),
+    "startingHour" : NumberInt(5),
+    "endingHour" : NumberInt(12),
+    "employees" : [
+
+    ]
+}
+{
+    "_id" : ObjectId("6619aa0b836b5d68877dbed5"),
+    "date" : ISODate("2024-04-19T00:00:00.000+0000"),
+    "startingHour" : NumberInt(6),
+    "endingHour" : NumberInt(15),
+    "employees" : [
+        ObjectId("65e115ed1bf3b969f2e24812"),
+        ObjectId("65e115ed1bf3b969f2e24812"),
+        ObjectId("65e115ec1bf3b969f2e24805"),
+        ObjectId("661abb0294136802f49e0c53")
+    ]
+}

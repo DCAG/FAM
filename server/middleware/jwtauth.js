@@ -14,10 +14,17 @@ module.exports = (req, res, next) => {
     //Extracting token from authorization header
     const authorization = req.headers['x-access-token'] //req.headers;
     // Checking if authorization header is present
-    //authorization === 'Bearer "token"'
+    // authorization expected to be === 'Bearer "token"'
     if (!authorization) {
         console.log('must be logged in')
-        return res.status(404).send({ error: "Must be logged in" });
+        return res.status(403).send({
+            name: "RESTRICTED_PAGE_ACCESS_MISSING_TOKEN",
+            message: "This page is accessible only to users who are logged in. If you are logged in already please send the request with the authorization token.",
+            action: { // suggested action
+                type: "retry",
+                to: req.originalUrl
+            }
+        })
     }
 
     console.log("1-authorization", authorization)
@@ -29,13 +36,17 @@ module.exports = (req, res, next) => {
     //Verifying if the token is valid.
     jwt.verify(token, JWT_SECRET, (err, payload) => {
         if (err) {
-            console.log("3-error on jwt.verify")
-            return res.status(403).send("Could not verify token"); //notice! 'return' statement will exit the callback func but will continue execute outside jwt.verify func!
+            return res.status(403).send({
+                name: "RESTRICTED_PAGE_ACCESS_INVALID_TOKEN",
+                message: "This page is accessible only to users who are logged in with a valid(!) token.",
+                action: { // suggested action
+                    type: "redirect",
+                    to: "login"
+                }
+            })
         } 
-        //else{
-          // Adding user information to the request object
+
         req.user = payload;
         next();
-        //}
     });
 };

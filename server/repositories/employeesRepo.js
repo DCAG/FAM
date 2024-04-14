@@ -1,17 +1,16 @@
 const employees = require('../models/employeesModel')
 require('../models/departmentsModel')
-require('../models/shiftsModel')
 
 const getAll = () => {
-    return employees.find().populate('department').populate('assignedShifts').exec()
+    return employees.find().populate('department').populate('shifts').exec()
 }
 
 const getById = (id) => {
-    return employees.findById(id)
+    return employees.findById(id).populate('department').populate('shifts').exec()
 }
 
 const getByDepartmentId = (departmentId) => {
-    return employees.findOne({departmentId: departmentId})
+    return employees.find({department: departmentId})
 }
 
 const update = (id,employee) => {
@@ -22,4 +21,8 @@ const create = (employee) => {
     return employees.create(employee)
 }
 
-module.exports = {getAll, getById, getByDepartmentId, update, create}
+const remove = (id) => {
+    return employees.findByIdAndDelete(id)
+}
+
+module.exports = {getAll, getById, getByDepartmentId, update, create, remove}

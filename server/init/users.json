@@ -1,0 +1,14 @@
+{
+    "_id" : ObjectId("65dd195a1bf3b969f2e247df"),
+    "fullName" : "Leanne Graham",
+    "numOfActions" : NumberInt(10000),
+    "maxActions" : NumberInt(10000),
+    "username" : "Bret"
+}
+{
+    "_id" : ObjectId("65dd19891bf3b969f2e247e0"),
+    "fullName" : "Ervin Howell",
+    "numOfActions" : NumberInt(50),
+    "maxActions" : NumberInt(50),
+    "username" : "Antonette"
+}

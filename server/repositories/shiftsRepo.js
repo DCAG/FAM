@@ -1,15 +1,15 @@
 const shifts = require('../models/shiftsModel')
 
 const getAll = () => {
-    return shifts.find()
+    return shifts.find().populate('employees').exec()
 }
 
 const getById = (id) => {
     return shifts.findById(id)
 }
 
-const update = (shift) => {
-    return shift.save()
+const update = (id,shift) => {
+    return shifts.findByIdAndUpdate(id,shift)
 }
 
 const create = (shift) => {

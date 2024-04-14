@@ -1,40 +1,28 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
+import { getHeaders } from '../utils/utils'
 import useAuth from '../utils/useAuth'
 
 const EMPLOYEES_URL = 'http://localhost:3000/employees'
 const DEPARTMENTS_CREATE_URL = 'http://localhost:3000/departments/create'
 
 function NewDepartment() {
-  const [department, setDepartment] = useState({name:'',manager:''})
+  const [department, setDepartment] = useState({name: '', manager: ''})
   const [employees, setEmployees] = useState([])
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    const result = await axios.post(`${DEPARTMENTS_CREATE_URL}`,department)
-    console.log("result",result)
-    if(result.status==201){
-      navigate(`/departments/${result.data._id}/edit`)
-    }
-  }
-
   const navigate = useNavigate()
-
   const {logoutUser} = useAuth();
 
   useEffect(() => {
     const getEmployees = async () => {
-      const accessToken = sessionStorage['accessToken']
-      const headers = {'x-access-token': "Bearer " + accessToken}
+      const headers = getHeaders()
       try{
         const {data} = await axios.get(EMPLOYEES_URL, { headers: headers })
         setEmployees(data)
-        //console.log(data)
       }catch(error){
         if(error?.response?.data?.name=="DAILY_MAX_ACTIONS_REACHED"){
           localStorage['lastError'] = error?.response?.data?.message  
-          // logout:
           logoutUser()
         }
         else{
@@ -48,9 +36,19 @@ function NewDepartment() {
     
   },[])
 
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const headers = getHeaders()
+    const result = await axios.post(DEPARTMENTS_CREATE_URL, department, {headers: headers})
+    console.log("result",result)
+    if(result.status==201){
+      navigate(`/departments/${result.data._id}/edit`)
+    }
+  }
+
   return (
     <div>
-        <h1>NewDepartment</h1>
+        <h1>New Department</h1>
         <Link to="/Departments">Cancel</Link>
         <form onSubmit={handleSubmit} method="post">
             <label htmlFor="name">Name</label>
@@ -65,7 +63,7 @@ function NewDepartment() {
                   )
                 })
               }
-            </select>
+            </select> <br />
             <input type="submit" value="Save" />
         </form>
     </div>

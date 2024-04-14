@@ -1,30 +1,26 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useNavigate, Link } from 'react-router-dom'
+import { getHeaders } from '../utils/utils'
 import useAuth from '../utils/useAuth'
 
 const DEPARTMENTS_URL = 'http://localhost:3000/departments'
 
 function Departments() {
-
   const [departments, setDepartments] = useState([])
 
   const navigate = useNavigate()
-
   const {logoutUser} = useAuth();
 
   useEffect(() => {
     const getDepartments = async () => {
-      const accessToken = sessionStorage['accessToken']
-      const headers = {'x-access-token': "Bearer " + accessToken}
+      const headers = getHeaders()
       try{
         const {data} = await axios.get(DEPARTMENTS_URL, { headers: headers })
         setDepartments(data)
-        //console.log(data)
       }catch(error){
         if(error?.response?.data?.name=="DAILY_MAX_ACTIONS_REACHED"){
-          localStorage['lastError'] = error?.response?.data?.message  
-          // logout:
+          localStorage['lastError'] = error.response.data.message  
           logoutUser()
         }
         else{
@@ -66,13 +62,16 @@ function Departments() {
                   </td>
                   <td>
                     <ul>
-                    {department.employees?.map((employee) => {
-                      return (
-                        <li key={employee._id}>
-                          {employee.firstName + ' ' + employee.lastName}
-                        </li>
-                      )
-                    })}
+                    {
+                      department.employees
+                      ?.map((employee) => {
+                        return (
+                          <li key={employee._id}>
+                            {employee.firstName + ' ' + employee.lastName}
+                          </li>
+                        )
+                      })
+                    }
                     </ul>
                   </td>
                 </tr>

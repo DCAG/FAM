@@ -12,7 +12,7 @@ const AuthProvider = ({ children }) => {
     if (hasAccess) {
       setIsAuthenticated(true);
     }
-  }, []) //TODO: update on route change! - this is not working after the user was logged out! "isAuthenticated" is not updated!!! (update: it is... after 2nd or 3rd trial)
+  }, [])
 
   const loginUser = (token, username, fullName, numOfActions, maxActions) => {
     sessionStorage['accessToken'] = token
@@ -24,10 +24,7 @@ const AuthProvider = ({ children }) => {
   }
 
   const logoutUser = () => {
-    //sessionStorage.removeItem('accessToken')
-    //sessionStorage.removeItem('username')
-    //sessionStorage.removeItem('fullName')
-    //sessionStorage.clear() //.removeItem('accessToken')
+    sessionStorage.clear()
     setIsAuthenticated(false)
   }
 

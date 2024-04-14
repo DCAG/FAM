@@ -15,12 +15,7 @@ import useAuth from './utils/useAuth'
 
 function App() {
   const navigate = useNavigate()
-  // const {logout} = useAuth()
-  const logout = () => {
-    sessionStorage.clear()
-    navigate('/')
-  }
-  const { isAuthenticated } = useAuth();
+  const {logoutUser} = useAuth()
 
   return (
     <>
@@ -28,11 +23,9 @@ function App() {
         <center>
           <img src={FAMLogo} className="logo" alt="FAM logo" />
         </center>
-        {/*TODO: implement with REDUX*/}
         <div className={!sessionStorage['accessToken']?'hide_section--default':''}>
           {sessionStorage["fullName"]??""} <br />
-          {/* Actions Left: {sessionStorage["numOfActions"]??"###"} out of {sessionStorage["maxActions"]??"###"}<br /> */}
-          <button onClick={logout}>Logout</button>
+          <button onClick={() => {logoutUser(); navigate('/')}}>Logout</button>
         </div>
         <nav className='main-nav'>
           <ul className='main-nav__items'>
